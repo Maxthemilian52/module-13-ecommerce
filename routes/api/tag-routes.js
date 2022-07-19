@@ -4,7 +4,7 @@ const { Tag, Product, ProductTag } = require('../../models');
 // The `/api/tags` endpoint
 
 router.get('/', (req, res) => {
-  ag.findAll({
+  Tag.findAll({
     include: {
       model: Product,
       attributes: ['product_name', 'price', 'stock', 'category_id']
